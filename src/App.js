@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import Tiles from './components/Tiles';
 
 function App() {
+  const [style,setStyle] = useState({id:0});
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" style={style}>
+      <div className="heading" style={style}>
+        Say a tile name
+        {style.id !==0 ? <div className="selected-tile"> Selected Tile  {style.id}</div>:null}
+      </div>
+      
+      <Tiles
+      change={(obj) => setStyle({...obj})}
+      />
+      </div>
+      
+      
+    
   );
 }
 

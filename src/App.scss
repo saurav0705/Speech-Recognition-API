@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+.App{
+  text-align: center;
+  transition-duration: 200ms;
+  height: 100%;
+  margin: 0;
+  .heading{
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+  }
+  .selected-tile{
+    font-size: 24px;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 2vh;
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.tiles{
+  margin: 7vh;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  .tile{
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 2.5em;
+    transition-duration: 200ms;
+  }
+}
+
+.upscale{
+  transform: scale(1.2,1.2);
+}
+
