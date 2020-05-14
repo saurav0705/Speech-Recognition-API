@@ -4,21 +4,22 @@ body {
   padding: 0;
 }
 
-/* use viewport-relative units to cover page fully */
+
 html,body{
   height: 100%;
   width: 100%;
 }
 
-/* include border and padding in element width and height */
-* {
-  box-sizing: border-box;
-}
+
+
 .App{
+  
   text-align: center;
   transition-duration: 200ms;
-  height: 100%;
   margin: 0;
+  height: 100%;
+  // background-color: blue;
+  padding: 10px;
   .heading{
     font-size: 4em;
     text-transform: uppercase;
@@ -56,5 +57,11 @@ html,body{
 
 .upscale{
   transform: scale(1.2,1.2);
+}
+
+.error{
+color: red;
+text-transform: uppercase;
+font-size: 1.2em;
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Tiles from './components/Tiles';
 
@@ -14,6 +14,7 @@ function App() {
       
       <Tiles
       change={(obj) => setStyle({...obj})}
+      style = {style}
       />
       </div>
       
